@@ -2,12 +2,7 @@ package animals;
 
 import types.Primate;
 
-/**
- * Write a description of class animals.Chimpanzee here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Chimpanzee extends Primate
 {
     private String age;

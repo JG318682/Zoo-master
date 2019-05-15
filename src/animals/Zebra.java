@@ -2,12 +2,6 @@ package animals;
 
 import types.Equine;
 
-/**
- * Write a description of class Ring_Tailed_Lemurs here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Zebra extends Equine
 {
     private String age;

@@ -2,12 +2,7 @@ package animals;
 
 import types.Reptile;
 
-/**
- * Write a description of class animals.Alligator here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Alligator extends Reptile
 {
     private String age;

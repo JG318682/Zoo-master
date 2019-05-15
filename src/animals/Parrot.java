@@ -2,12 +2,6 @@ package animals;
 
 import types.Birds;
 
-/**
- * Write a description of class animals.Parrot here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Parrot extends Birds
 {
     private String age;

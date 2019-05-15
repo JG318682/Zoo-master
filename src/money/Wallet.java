@@ -6,12 +6,12 @@ public class Wallet {
     private int totalWallet;
     private int cost;
 
-    public Wallet(int wallet){
+    public Wallet(){
         this.wallet = wallet;
         totalWallet = wallet + totalWallet;
     }
-    public int setWallet(){
-
+    public void setWallet(int a){
+        this.wallet = a;
     }
 
     public int getWallet() {

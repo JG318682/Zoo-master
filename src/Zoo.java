@@ -1,25 +1,12 @@
-package main;
-
-import animal_Qualities.Flying;
-import animal_Qualities.Swimming;
-import animal_Qualities.Walking;
-
-import animals.*;
-
-
-import retail.Concessions;
-import retail.Gift_Shop;
-import types.Birds;
-import types.Equine;
-import types.Primate;
-import types.Reptile;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.Random;
 import java.util.Scanner;
 
-import static com.sun.tools.internal.xjc.reader.Ring.add;
+// The Zoo class is your main class that all information is run through
+// Review commented text in the switch statement
+// When the user types look up it should then call all types of birds
 
 /**
  * Test
@@ -33,7 +20,7 @@ public class Zoo
     {
         List<Animal> animals = new ArrayList<Animal>();
 
-        System.out.println("Welcome to the main.Zoo!\n");
+        System.out.println("Welcome to the Zoo!\n");
         System.out.print("Building the cages");
         delayDots();
         System.out.print("Populating the animals");
@@ -58,24 +45,18 @@ public class Zoo
                 case "visit cages" : 
                 msg = visitCages(animals);
                 break;
-                case "look up" :
-                msg = lookUp(animals);
-                break;
+//                case "look up" :
+//                msg = lookUp(animals);
+//                break;
                 case "look around" :
                 msg = lookAround(animals);
                 break;
                 case "listen" :
                 msg = listen(animals);
                 break;
-                case "look down":
-                msg = lookDown(animals);
-                break;
-                case "concessions":
-                    Concessions.displayConcessions();
-                    break;
-                case "gift shop":
-                    Gift_Shop.displayGiftShop();
-                    break;
+//                case "look down":
+//                msg = lookDown(animals);
+//                break;
                 default : msg = "You flail helplessly with indecision.";
             }
             System.out.println("\n" + msg);
@@ -109,22 +90,22 @@ public class Zoo
         return msg;
     }
 
-    public static String lookDown(List<Animal> animals)
-    {
-        String msg = "";
-
-        for(Animal a : animals)
-        {
-            if(a instanceof Swimming)
-            {
-                Swimming f = (Swimming) a;
-                msg += a.getName() + ": \n       "
-                + f.swim() + "\n";
-            }
-        }
-        return msg;
-
-    }
+//    public static String lookDown(List<Animal> animals)
+//    {
+//        String msg = "";
+//
+//        for(Animal a : animals)
+//        {
+//            if(a instanceof Swimming)
+//            {
+//                Swimming f = (Swimming) a;
+//                msg += a.getName() + ": \n       "
+//                + f.swim() + "\n";
+//            }
+//        }
+//        return msg;
+//
+//    }
 
     public static String lookAround(List<Animal> animals)
     {
@@ -132,7 +113,7 @@ public class Zoo
 
         for(Animal a : animals)
         {
-            if(a instanceof Walking)
+            if(a instanceof Walking) 
             {
                 Walking w = (Walking) a;
                 msg += a.getName() + ": \n       " 
@@ -143,22 +124,22 @@ public class Zoo
 
     }
 
-    public static String lookUp(List<Animal> animals)
-    {
-        String msg = "";
-
-        for(Animal a : animals)
-        {
-            if(a instanceof Flying)
-            {
-                Flying f = (Flying) a;
-                msg += a.getName() + ": \n       "
-                + f.fly() + "\n";
-            }
-        }
-        return msg;
-
-    }
+//    public static String lookUp(List<Animal> animals)
+//    {
+//        String msg = "";
+//
+//        for(Animal a : animals)
+//        {
+//            if(a instanceof Flying)
+//            {
+//                Flying f = (Flying) a;
+//                msg += a.getName() + ": \n       "
+//                + f.fly() + "\n";
+//            }
+//        }
+//        return msg;
+//
+//    }
 
     /**
      * This prints an ellipses with 1 second between each period
@@ -194,22 +175,6 @@ public class Zoo
         animals.add(hairy);
         Chimpanzee george = new Chimpanzee();
         animals.add(george);
-        Orangutan orange  = new Orangutan();
-        add(orange);
-        Ring_Tailed_Lemur julian = new Ring_Tailed_Lemur();
-        add(julian);
-        Birds feathery = new Birds();
-        animals.add(feathery);
-        Parrot oscar = new Parrot();
-        add(julian);
-        Equine horsey = new Equine();
-        add(horsey);
-        Zebra Marty = new Zebra();
-        add(julian);
-        Reptile scaley = new Reptile();
-        add(scaley);
-        Alligator franklin = new Alligator();
-        add(franklin);
 
     }
 }

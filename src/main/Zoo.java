@@ -19,8 +19,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
-import static com.sun.tools.internal.xjc.reader.Ring.add;
-
 /**
  * Test
  * 
